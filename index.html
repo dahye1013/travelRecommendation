@@ -21,22 +21,23 @@
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="./about-us.html">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="./conatact-us.html">Contact Us</a></li>
       </ul>
-      <div class="search-bar">
+      <form id="search-bar" class="search-bar">
         <div class="input-wrapper">
           <input
             type="text"
             id="search"
             placeholder="Enter a destination or keyword"
+            autocomplete="beach"
           />
           <i class="fas fa-search search-icon"></i>
           <div class="btn-group">
-            <button id="search-btn">Search</button>
+            <button type="submit" id="search-btn">Search</button>
             <button id="clear-btn">Clear</button>
           </div>
         </div>
-      </div>
+      </form>
     </nav>
 
     <!-- Hero Section -->
@@ -52,6 +53,13 @@
         </p>
         <button class="cta-button">Book Now</button>
       </div>
+
+      <!-- Right Section - Fetched Data Container -->
+      <section class="destination-section">
+        <div id="destination-list">
+          <!-- Cards will be dynamically inserted here after fetching data -->
+        </div>
+      </section>
     </section>
 
     <!-- Social Media Links -->
@@ -62,6 +70,6 @@
       <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,111 @@
+/* Contact Hero Section */
+.contact-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-content {
+  z-index: 2;
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin-left: 150px;
+  display: flex;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  min-width: 400px;
+}
+
+.contact-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.contact-content p {
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+/* Social Media Links and Contact Info */
+
+.social-links {
+  margin-right: 15px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #1abc9c;
+}
+
+.contact-info p {
+  font-size: 1.5rem;
+}
+
+/* Contact Form */
+.contact-form {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Semi-transparent form background */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #4aa494;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}

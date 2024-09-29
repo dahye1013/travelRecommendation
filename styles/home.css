@@ -1,8 +1,17 @@
+html {
+  background-color: #22534a;
+}
+.main {
+  position: relative;
+  height: 100%;
+  display: flex;
+  background-color: #22534a;
+}
 /* Hero Section */
 .hero {
-  position: relative;
+  z-index: 1;
   height: 95vh;
-  display: flex;
+  width: 50%;
 }
 
 .hero-text {
@@ -49,19 +58,23 @@
   left: 60%;
   padding: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
 /* Destination Card */
 .destination-card {
+  z-index: 10;
   width: 300px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background-color: white;
   transition: transform 0.3s ease;
+}
+
+.destination-card:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .destination-card:hover {

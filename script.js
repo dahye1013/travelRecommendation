@@ -14,6 +14,10 @@ const images = {
     "https://images.unsplash.com/photo-1643400813604-b3877e0c4db9?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNvcGFjYWJhbmF8ZW58MHx8MHx8fDA%3D",
 };
 
+const destinationList = document.getElementById("destination-list");
+const submitForm = document.querySelector(".search-bar");
+const clearBtn = document.getElementById("clear-btn");
+
 const getTravelRecommend = async () => {
   const response = await fetch(
     "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMSkillsNetwork-JS0101EN-SkillsNetwork/travel1.json",
@@ -36,11 +40,7 @@ const destination_card = (
 `;
 
 const drawTravelRecommendations = (recommendations = []) => {
-  const destinationList = document.getElementById("destination-list");
-
   if (recommendations.length === 0) {
-    console.log("No recommendations found");
-
     destinationList.innerHTML = `
     <h2>No recommendations found</h2>
     <h3>Please enter one of <code> beaches<code>, <code>temples</code>, <code>countries</code></h3> `;
@@ -57,7 +57,6 @@ const drawTravelRecommendations = (recommendations = []) => {
   });
 };
 
-const submitForm = document.querySelector(".search-bar");
 const searchHandler = async (e) => {
   e.preventDefault();
   const keyword = document.getElementById("search").value;
@@ -68,6 +67,12 @@ const searchHandler = async (e) => {
   drawTravelRecommendations(result);
 };
 
+const clearHandler = () => {
+  destinationList.innerHTML = "";
+  document.getElementById("search").value = "";
+};
+
 window.addEventListener("DOMContentLoaded", () => {
   submitForm.addEventListener("submit", searchHandler);
+  clearBtn.addEventListener("click", clearHandler);
 });
